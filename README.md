@@ -27,7 +27,7 @@ git push
 jx import
 
 # watch activities
-jx get activities --filter go-demo-6 --watch # Stop with *ctrl*c*
+jx get activities --filter skiapp --watch # Stop with *ctrl*c*
 
 # check kubernetes resources status
 kubectl --namespace jx-staging logs -l app=skiapp

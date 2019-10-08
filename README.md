@@ -7,7 +7,7 @@ This is a simple NodeJS application that uses Bootstrap UI. It listens on localh
 # Reset after demo
 
 ```bash
-it checkout orig
+git checkout orig
 
 git merge -s ours master --no-edit
 

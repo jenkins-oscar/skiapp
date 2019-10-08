@@ -15,7 +15,7 @@ git checkout master
 
 git merge orig
 
-rm -rf charts
+rm -rf charts && rm jenkins-x.yml && rm skaffold.yaml
 
 git push
 

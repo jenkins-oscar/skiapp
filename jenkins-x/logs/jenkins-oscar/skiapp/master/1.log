@@ -1,37 +1,37 @@
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-4hqtb[0m
-{"level":"warn","ts":1570506856.6790025,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1570506856.6796162,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-ltkc2[0m
+{"level":"warn","ts":1570507422.9935448,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570507422.9941192,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-zcn5h[0m
-{"level":"warn","ts":1570506858.4542682,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1570506858.4563239,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/skiapp\""}
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-c7zcz[0m
+{"level":"warn","ts":1570507424.4152298,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1570507424.4195979,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/skiapp\""}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-master-gv4xc[0m
-{"level":"warn","ts":1570506901.3154187,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1570506902.8383229,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ v0.0.1 in path /workspace/source"}
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-master-rel-pfmkt[0m
+{"level":"warn","ts":1570507431.4034762,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1570507432.352708,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ v0.0.3 in path /workspace/source"}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:8b05b0b6f56980591d5017a92b90812ab54102af
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:0e1959f25fca4690c327944c89b03fdf7f2e3f1f
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
 WARNING: failed to find Secret npm-token in namespace **
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
 npm WARN skiapp@1.0.0 No repository field.
 npm WARN skiapp@1.0.0 No license field.
 
-added 152 packages from 599 contributors and audited 269 packages in 5.469s
+added 152 packages from 599 contributors and audited 269 packages in 4.205s
 found 0 vulnerabilities
 
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
 
 > skiapp@1.0.0 test /workspace/source
 > ./node_modules/mocha/bin/mocha tests/ --exit
@@ -43,17 +43,17 @@ Server running at http://localhost:8080
     ✓ Should return a 200 ok response
 
 
-  1 passing (38ms)
+  1 passing (39ms)
 
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
 [36mINFO[0m[0000] Downloading base image node:9-slim           
-ERROR: logging before flag.Parse: E1008 03:55:14.959548      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-ERROR: logging before flag.Parse: E1008 03:55:14.964387      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
-2019/10/08 03:55:14 No matching credentials were found, falling back on anonymous
+ERROR: logging before flag.Parse: E1008 04:04:00.242208       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E1008 04:04:00.245855       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/10/08 04:04:00 No matching credentials were found, falling back on anonymous
 [36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
 [36mINFO[0m[0001] Downloading base image node:9-slim           
-2019/10/08 03:55:16 No matching credentials were found, falling back on anonymous
+2019/10/08 04:04:01 No matching credentials were found, falling back on anonymous
 [36mINFO[0m[0001] Executing 0 build triggers                   
 [36mINFO[0m[0001] cmd: EXPOSE                                  
 [36mINFO[0m[0001] Adding exposed port: 8080/tcp                
@@ -73,88 +73,45 @@ ERROR: logging before flag.Parse: E1008 03:55:14.964387      10 metadata.go:159]
 [36mINFO[0m[0002] Taking snapshot of files...                  
 [36mINFO[0m[0002] Using files from context: [/workspace/source] 
 [36mINFO[0m[0002] COPY . .                                     
-[36mINFO[0m[0003] Taking snapshot of files...                  
+[36mINFO[0m[0002] Taking snapshot of files...                  
 [36mINFO[0m[0003] CMD ["npm", "start"]                         
 [36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
-2019/10/08 03:55:19 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
-2019/10/08 03:55:19 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
-2019/10/08 03:55:19 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
-2019/10/08 03:55:19 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
-2019/10/08 03:55:19 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
-2019/10/08 03:55:21 pushed blob: sha256:7af18e4d44dd74ba22478c2c84247383595382f6f45a267a2a69d90e24cc9b04
-2019/10/08 03:55:21 pushed blob: sha256:1d9ed4cb60bef32359302720ac166cb2071ab5542c4294481e15e472dad26aa3
-2019/10/08 03:55:22 pushed blob: sha256:d992d544d36022a02ab70c34c3c1e37eee96d70eece01a95d945897efd076fa0
-2019/10/08 03:55:22 gcr.io/**-development/skiapp:0.0.1: digest: sha256:5833694ce9c8d8a14137cb48e69f56dfe30125ae8ca5fcdd7542f09029f80516 size: 1407
+2019/10/08 04:04:04 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2019/10/08 04:04:04 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2019/10/08 04:04:04 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2019/10/08 04:04:04 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2019/10/08 04:04:04 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2019/10/08 04:04:06 pushed blob: sha256:6de669a993b8d8a8314f0acdacd11161709c76c9c91a043678b571b19841f70c
+2019/10/08 04:04:06 pushed blob: sha256:6da84a94d4ce1fdd9159faa6d95ac31f3441f387cd0b359d12e599ca42944472
+2019/10/08 04:04:07 pushed blob: sha256:4760e4b06ef47b2565d17e06b674123fb2a09db6624a2c7d44f35c25b9e75eba
+2019/10/08 04:04:08 gcr.io/**-development/skiapp:0.0.3: digest: sha256:49e98522a72dbaa651d06c76f14cbcd59b18416fce4e92de361fcf21bd941ebc size: 1407
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/skiapp to an unshallow repository
-Generating change log from git ref 77455de5516f1e3c83a8ed63f64d31d30f947809 => 6838700bd8c0cecab971987ed821f8999ba466c6
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit 0f3eab86f0629952d97a90c478f9bb654669aa91 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Finding issues in commit messages using git format
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit e082dbc0c1e84128359d472745395d95b4701cdb with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit e082dbc0c1e84128359d472745395d95b4701cdb with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit 3d9041065a3ae39269697a8fabd0a3bb02d70985 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit 3d9041065a3ae39269697a8fabd0a3bb02d70985 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit f69508fbea6d9a9280fd48de238251df13783eec with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit f69508fbea6d9a9280fd48de238251df13783eec with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit 2137b9d04524f7aaaac4233bdd70851d42fb52a5 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit 2137b9d04524f7aaaac4233bdd70851d42fb52a5 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit e54f640c362ad57e417688eda8b9b84bc627c9a3 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit e54f640c362ad57e417688eda8b9b84bc627c9a3 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit 95ff64ea8bebd2029bee37fade0d4f122866c61c with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit 95ff64ea8bebd2029bee37fade0d4f122866c61c with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-WARNING: No release found for jenkins-oscar/skiapp and tag v0.0.1 so creating a new release
-Updated the release information at https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.1
+Generating change log from git ref 6cbf68109bd7c01fe422565f56891ff44632d2be => 5f2f2b22315f35059e61ac5a84a1c0c1251e77ac
+WARNING: No release found for jenkins-oscar/skiapp and tag v0.0.3 so creating a new release
+Updated the release information at https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.3
 generated: /workspace/source/charts/skiapp/templates/release.yaml
-Created Release skiapp-0-0-1 resource in namespace **
-Updating PipelineActivity jenkins-oscar-skiapp-master-1 with version 0.0.1
-Updated PipelineActivities jenkins-oscar-skiapp-master-1 with release notes URL: https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.1
+Created Release skiapp-0-0-3 resource in namespace **
+Updating PipelineActivity jenkins-oscar-skiapp-master-1 with version 0.0.3
+Updated PipelineActivities jenkins-oscar-skiapp-master-1 with release notes URL: https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.3
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file skiapp-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Uploading chart file skiapp-0.0.3.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-rhql5-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
-Promoting app skiapp version 0.0.1 to namespace **-staging
-WARNING: Waiting for the fork of ********************/environment-boottest-staging to appear...
-Forked Git repository to https://github.com/********************/environment-boottest-staging
-Created Pull Request: https://github.com/jenkins-oscar/environment-boottest-staging/pull/1
-Pull Request https://github.com/jenkins-oscar/environment-boottest-staging/pull/1 is merged at sha 960711fd8c4cca330c5be07f98b78514d24be791
+Promoting app skiapp version 0.0.3 to namespace **-staging
+Created Pull Request: https://github.com/jenkins-oscar/environment-boottest-staging/pull/2
+Pull Request https://github.com/jenkins-oscar/environment-boottest-staging/pull/2 is merged at sha 6b08c81c11c19c23033d1b5015a44e4834c141da
 Pull Request merged but we are not waiting for the update pipeline to complete!
-WARNING: Could not find the service URL in namespace **-staging for names skiapp, **-skiapp, **-staging-skiapp

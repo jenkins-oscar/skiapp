@@ -1,0 +1,29 @@
+apiVersion: "jenkins.io/v1"
+kind: "SSO"
+metadata:
+  name: {{ template "fullname" . }}
+  labels:
+    draft: {{ default "draft-app" .Values.draft }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+spec:
+  oidcIssuerUrl: "https://dex.jx.cjxd.sharepointoscar.com"
+  upstreamService: "{{ template "fullname" . }}"
+  forwardToken: false
+  domain: "sharepointoscar.com"
+  certIssuerName: "letsencrypt-prod"
+  urlTemplate: "{{.Service}}.{{.Namespace}}.{{.Domain}}"
+  cookieSpec:
+    name: "sso-{{ template "fullname" . }}"
+    expire: "168h"
+    refresh: "60m"
+    secure: true
+    httpOnly: true
+  proxyImage: "quay.io/pusher/oauth2_proxy"
+  proxyImageTag: "v3.2.0"
+  proxyResources:
+    limits:
+      cpu: 100m
+      memory: 256Mi
+    requests:
+      cpu: 80m
+      memory: 128Mi

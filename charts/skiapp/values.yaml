@@ -50,9 +50,13 @@ service:
   internalPort: 8080
   annotations:
     fabric8.io/expose: "true"
+<<<<<<< HEAD
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
     fabric8.io/ingress.annotations: "nginx.ingress.kubernetes.io/auth-type: basic"
     fabric8.io/ingress.annotations: "nginx.ingress.kubernetes.io/auth-secret: jx-basic-auth"
+=======
+    fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx\nnginx.ingress.kubernetes.io/auth-type: basic\nnginx.ingress.kubernetes.io/auth-secret: jx-basic-auth"
+>>>>>>> 76e450e7fa5d69d74ac1e936b8e295fec52fc418
 
 resources:
   limits:

@@ -1,5 +1,5 @@
-apiVersion: "jenkins.io/v1"
-kind: "SSO"
+apiVersion: jenkins.io/v1
+kind: SSO
 metadata:
   name: {{ template "fullname" . }}
   labels:

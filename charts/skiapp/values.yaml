@@ -51,6 +51,9 @@ service:
   annotations:
     fabric8.io/expose: "true"
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
+    fabric8.io/ingress.annotations: "nginx.ingress.kubernetes.io/auth-type: basic"
+    fabric8.io/ingress.annotations: "nginx.ingress.kubernetes.io/auth-secret: jx-basic-auth"
+
 resources:
   limits:
     cpu: 400m

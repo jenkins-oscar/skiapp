@@ -1,0 +1,138 @@
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-4xvx8[0m
+{"level":"warn","ts":1582047759.56658,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582047759.5756311,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-b6fn7[0m
+{"level":"warn","ts":1582047761.5048077,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582047761.5815737,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-master-rel-cllw8[0m
+{"level":"warn","ts":1582047799.0757518,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582047801.5196931,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ v0.0.33 in path /workspace/source"}
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b82a69c6308931e2b7a9b22ae243bb65e24284ef
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN skiapp@1.0.0 No repository field.
+npm WARN skiapp@1.0.0 No license field.
+
+added 152 packages from 599 contributors and audited 269 packages in 4.598s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> skiapp@1.0.0 test /workspace/source
+> ./node_modules/mocha/bin/mocha tests/ --exit
+
+Server running at http://localhost:8080
+
+
+  GET Home page
+    ✓ Should return a 200 ok response (46ms)
+
+
+  1 passing (54ms)
+
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0218 17:43:36.210285      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0218 17:43:36.218748      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/02/18 17:43:36 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2020/02/18 17:43:37 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] Taking snapshot of full filesystem...        
+[36mINFO[0m[0002] ENV PORT 8080                                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] EXPOSE 8080                                  
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] WORKDIR /usr/src/app                         
+[36mINFO[0m[0002] cmd: workdir                                 
+[36mINFO[0m[0002] Changed working directory to /usr/src/app    
+[36mINFO[0m[0002] Creating directory /usr/src/app              
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0003] Taking snapshot of files...                  
+[36mINFO[0m[0003] CMD ["npm", "start"]                         
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+2020/02/18 17:43:40 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/02/18 17:43:40 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/02/18 17:43:40 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/02/18 17:43:40 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/02/18 17:43:40 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/02/18 17:43:42 pushed blob: sha256:cee5f267e02bf2b1d924c820fc2563b4e80c42bf2396b251319d82e0d38da66c
+2020/02/18 17:43:42 pushed blob: sha256:ab6d0b1f96e35b6a48bb3babef2d68c86a71cea87d62e221ee4f318600629a8e
+2020/02/18 17:43:43 pushed blob: sha256:d81a7a106871f9e9a191881ff215b58f419856dee21ce1f63186a418e8f66bdf
+2020/02/18 17:43:43 gcr.io/**-development/skiapp:0.0.33: digest: sha256:c4a55bc0a0e554b7e6ab5be7d8d04de6da9c3cad58dcb075ad772a06166c468b size: 1407
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/skiapp to an unshallow repository
+Generating change log from git ref f8083c89e520ea6142df4468b55e78b9842d85ec => 68431effdb69a40bab202b78ed4664280356703c
+Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit b82a69c6308931e2b7a9b22ae243bb65e24284ef with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email me@sharepointoscar.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit b82a69c6308931e2b7a9b22ae243bb65e24284ef with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for jenkins-oscar/skiapp and tag v0.0.33 so creating a new release
+Updated the release information at https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.33
+generated: /workspace/source/charts/skiapp/templates/release.yaml
+Created Release skiapp-0-0-33 resource in namespace **
+Updating PipelineActivity jenkins-oscar-skiapp-master-2 with version 0.0.33
+Updated PipelineActivities jenkins-oscar-skiapp-master-2 with release notes URL: https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.33
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file skiapp-0.0.33.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xlvrg-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app skiapp version 0.0.33 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/jenkins-oscar/environment-goldrush-staging/pull/2
+Added label updatebot to Pull Request https://github.com/jenkins-oscar/environment-goldrush-staging/pull/2
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-goldrush-staging/pull/2
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-goldrush-staging/pull/2
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-goldrush-staging/pull/2
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-goldrush-staging/pull/2
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-goldrush-staging/pull/2
+got git provider status pending from PR https://github.com/jenkins-oscar/environment-goldrush-staging/pull/2
+Pull Request https://github.com/jenkins-oscar/environment-goldrush-staging/pull/2 is merged at sha c19669a241601695af3d1b26d8f70d9acb7ed6b9
+Pull Request merged but we are not waiting for the update pipeline to complete!

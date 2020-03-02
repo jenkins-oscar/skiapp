@@ -32,3 +32,5 @@ jx get activities --filter skiapp --watch # Stop with *ctrl*c*
 # check kubernetes resources status
 kubectl --namespace jx-staging logs -l app=skiapp
 ```
+
+With love [@SharePointOscar](twitter.com/SharePointOscar)

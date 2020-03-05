@@ -7,16 +7,9 @@ This is a simple NodeJS application that uses Bootstrap UI. It listens on localh
 # Reset after demo
 
 ```bash
-git checkout orig
-
-git merge -s ours master --no-edit
-
-git checkout master
-
-git merge orig
-
-rm -rf charts && rm jenkins-x.yml && rm skaffold.yaml
-
+git checkout orig && git merge -s ours master --no-edit && \
+git checkout master && git merge orig && \
+rm -rf charts && rm jenkins-x.yml && rm skaffold.yaml && \
 git push
 
 ```

@@ -1,0 +1,137 @@
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-2phks[0m
+{"level":"warn","ts":1583783316.5932615,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583783316.5938823,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-x75tc[0m
+{"level":"warn","ts":1583783317.5368795,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583783317.5383327,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-pr-7-pr-bu-gn95b-4z7tf[0m
+{"level":"warn","ts":1583783323.6357713,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583783325.1938002,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:e9cd0360b307c33a3642195f18dd534d7d26ff75,7:72a65cabd3d2843ba09badd22076789c206643e5
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git fetch origin --unshallow 72a65cabd3d2843ba09badd22076789c206643e5: e9cd0360b307c33a3642195f18dd534d7d26ff75:
+DEBUG: ran git fetch --unshallow origin 72a65cabd3d2843ba09badd22076789c206643e5: e9cd0360b307c33a3642195f18dd534d7d26ff75: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard e9cd0360b307c33a3642195f18dd534d7d26ff75
+DEBUG: ran git reset --hard e9cd0360b307c33a3642195f18dd534d7d26ff75 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 72a65cabd3d2843ba09badd22076789c206643e5
+DEBUG: ran git merge 72a65cabd3d2843ba09badd22076789c206643e5 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e e9cd0360b307c33a3642195f18dd534d7d26ff75..HEAD
+Merged SHA 72a65cabd3d2843ba09badd22076789c206643e5 with commit message 'changed homepage verbiage' into base branch master
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN skiapp@1.0.0 No repository field.
+npm WARN skiapp@1.0.0 No license field.
+
+added 152 packages from 599 contributors and audited 269 packages in 3.798s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> skiapp@1.0.0 test /workspace/source
+> ./node_modules/mocha/bin/mocha tests/ --exit
+
+Server running at http://localhost:8080
+
+
+  GET Home page
+    ✓ Should return a 200 ok response
+
+
+  1 passing (40ms)
+
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0309 19:48:55.224122      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0309 19:48:55.226887      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/03/09 19:48:55 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0000] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+2020/03/09 19:48:56 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] ENV PORT 8080                                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] WORKDIR /usr/src/app                         
+[36mINFO[0m[0001] cmd: workdir                                 
+[36mINFO[0m[0001] Changed working directory to /usr/src/app    
+[36mINFO[0m[0001] Creating directory /usr/src/app              
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0003] CMD ["npm", "start"]                         
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+2020/03/09 19:48:59 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/03/09 19:48:59 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/03/09 19:48:59 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/03/09 19:48:59 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/03/09 19:48:59 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/03/09 19:49:01 pushed blob: sha256:8cc80f27cc12fa1eadbd873f7d2211a25ef5944cdf64c2e65f63786728b69574
+2020/03/09 19:49:01 pushed blob: sha256:f1172a8d08155712be250ae88e9842199a59dac24d0c79ed93ae6fa71f4adf60
+2020/03/09 19:49:01 pushed blob: sha256:e7e85926658c15b44a6ecff73dacb7877510a5a95dcb619d0eccfd31664cd96c
+2020/03/09 19:49:02 gcr.io/**-development/skiapp:0.0.0-SNAPSHOT-PR-7-1: digest: sha256:299e053f37515a7ad049b511d30613c23a76d5e166483a5199268629f7961d5e size: 1407
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-7-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-7-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/**-development\/skiapp|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-7-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-7-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-7-pr-bu-gn95b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Found commit author match for: sharepointoscar with email address: me@sharepointoscar.com
+Created environment jenkins-oscar-skiapp-pr-7
+Namespace **-jenkins-oscar-skiapp-pr-7 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 35.185.219.24.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/**-development/skiapp
+    tag: 0.0.0-SNAPSHOT-PR-7-1
+
+Updating PipelineActivities jenkins-oscar-skiapp-pr-7-1 which has status Running
+Preview application is now available at: http://skiapp.**-jenkins-oscar-skiapp-pr-7.35.185.219.24.nip.io

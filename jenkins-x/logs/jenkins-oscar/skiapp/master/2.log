@@ -1,38 +1,38 @@
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-n6hnl[0m
-{"level":"warn","ts":1583782360.5402486,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583782360.540843,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-qvtww[0m
+{"level":"warn","ts":1583805880.6132858,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583805880.614133,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-ppkn4[0m
-{"level":"warn","ts":1583782361.6008296,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1583782361.6025596,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-s69qs[0m
+{"level":"warn","ts":1583805881.8226068,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583805881.8434849,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-master-rel-8dch2-8td6w[0m
-{"level":"warn","ts":1583782396.1043937,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1583782400.1829963,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ v0.0.49 in path /workspace/source"}
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-master-rel-h6z2l-gjx8k[0m
+{"level":"warn","ts":1583805889.773377,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583805890.7566314,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ v0.0.57 in path /workspace/source"}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:e9cd0360b307c33a3642195f18dd534d7d26ff75
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c2244c870f00b7a532317b18dc23fee7ac8190e0
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
 Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
 WARNING: failed to find Secret npm-token in namespace **
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
 npm WARN skiapp@1.0.0 No repository field.
 npm WARN skiapp@1.0.0 No license field.
 
-audited 269 packages in 1.436s
+added 152 packages from 599 contributors and audited 269 packages in 4.462s
 found 0 vulnerabilities
 
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
 
 > skiapp@1.0.0 test /workspace/source
 > ./node_modules/mocha/bin/mocha tests/ --exit
@@ -44,76 +44,76 @@ Server running at http://localhost:8080
     ✓ Should return a 200 ok response
 
 
-  1 passing (31ms)
+  1 passing (41ms)
 
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
 [36mINFO[0m[0000] Downloading base image node:9-slim           
-ERROR: logging before flag.Parse: E0309 19:33:29.072364      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-ERROR: logging before flag.Parse: E0309 19:33:29.078303      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
-2020/03/09 19:33:29 No matching credentials were found, falling back on anonymous
+ERROR: logging before flag.Parse: E0310 02:04:59.929319      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0310 02:04:59.933406      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/03/10 02:04:59 No matching credentials were found, falling back on anonymous
 [36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
 [36mINFO[0m[0001] Downloading base image node:9-slim           
-2020/03/09 19:33:30 No matching credentials were found, falling back on anonymous
+2020/03/10 02:05:00 No matching credentials were found, falling back on anonymous
 [36mINFO[0m[0001] Executing 0 build triggers                   
 [36mINFO[0m[0001] cmd: EXPOSE                                  
 [36mINFO[0m[0001] Adding exposed port: 8080/tcp                
 [36mINFO[0m[0001] Using files from context: [/workspace/source] 
-[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
-[36mINFO[0m[0001] Taking snapshot of full filesystem...        
-[36mINFO[0m[0001] ENV PORT 8080                                
-[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0001] EXPOSE 8080                                  
-[36mINFO[0m[0001] cmd: EXPOSE                                  
-[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0001] WORKDIR /usr/src/app                         
-[36mINFO[0m[0001] cmd: workdir                                 
-[36mINFO[0m[0001] Changed working directory to /usr/src/app    
-[36mINFO[0m[0001] Creating directory /usr/src/app              
-[36mINFO[0m[0001] Taking snapshot of files...                  
-[36mINFO[0m[0001] Using files from context: [/workspace/source] 
-[36mINFO[0m[0001] COPY . .                                     
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] Taking snapshot of full filesystem...        
+[36mINFO[0m[0002] ENV PORT 8080                                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] EXPOSE 8080                                  
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] WORKDIR /usr/src/app                         
+[36mINFO[0m[0002] cmd: workdir                                 
+[36mINFO[0m[0002] Changed working directory to /usr/src/app    
+[36mINFO[0m[0002] Creating directory /usr/src/app              
 [36mINFO[0m[0002] Taking snapshot of files...                  
-[36mINFO[0m[0003] CMD ["npm", "start"]                         
-[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
-2020/03/09 19:33:32 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
-2020/03/09 19:33:32 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
-2020/03/09 19:33:32 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
-2020/03/09 19:33:32 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
-2020/03/09 19:33:32 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
-2020/03/09 19:33:34 pushed blob: sha256:968adccd1932f338eaa107793757ef86ee6e11e5a522d6337c36f099797cda36
-2020/03/09 19:33:34 pushed blob: sha256:1d7da966842199658c90b764343bade69d7b77ad9c93aaad8e3ca1ba3e8ebc34
-2020/03/09 19:33:35 pushed blob: sha256:b7e0078a115b116eec7773386cfccc5b83c27f8f030190b9bd9e0a54e719027a
-2020/03/09 19:33:36 gcr.io/**-development/skiapp:0.0.49: digest: sha256:b713fd5fb37e23eda19b6834f34b3e2661061c4dcb7b5cf92abb5c6dc6c56c26 size: 1407
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0003] Taking snapshot of files...                  
+[36mINFO[0m[0004] CMD ["npm", "start"]                         
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+2020/03/10 02:05:04 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/03/10 02:05:04 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/03/10 02:05:04 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/03/10 02:05:04 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/03/10 02:05:04 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/03/10 02:05:05 pushed blob: sha256:839144ad90952aaf517ef2dd427edcfafd5c070c233c5638acd0937290615503
+2020/03/10 02:05:06 pushed blob: sha256:65677a26b001efec9ab0640cb92779946952b6e75703bd2574bafc4199e17860
+2020/03/10 02:05:06 pushed blob: sha256:c1f9dec68dff316e4fab347b940b777ceabc891218a623a4c1386645d19e8f27
+2020/03/10 02:05:07 gcr.io/**-development/skiapp:0.0.57: digest: sha256:e7c367fa768e491105114e43b95715c5bd72d874ea2b9e35371cbf776ebaae8f size: 1407
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
 Converted /workspace/source/charts/skiapp to an unshallow repository
-Generating change log from git ref 8ca28e08a48264cdbb22aef65e5833e77c4c4975 => be20d831bdad276d96c5fad467d4a65599ea91fb
-WARNING: No release found for jenkins-oscar/skiapp and tag v0.0.49 so creating a new release
-Updated the release information at https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.49
+Generating change log from git ref d864bfe91eb5bc2a7d68e941ec31138994a2d979 => 48258cdf1fbb4ea99f1f0acd34d6d8513bf23544
+WARNING: No release found for jenkins-oscar/skiapp and tag v0.0.57 so creating a new release
+Updated the release information at https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.57
 generated: /workspace/source/charts/skiapp/templates/release.yaml
-Created Release skiapp-0-0-49 resource in namespace **
-Updating PipelineActivity jenkins-oscar-skiapp-master-2 with version 0.0.49
-Updated PipelineActivities jenkins-oscar-skiapp-master-2 with release notes URL: https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.49
+Created Release skiapp-0-0-57 resource in namespace **
+Updating PipelineActivity jenkins-oscar-skiapp-master-2 with version 0.0.57
+Updated PipelineActivities jenkins-oscar-skiapp-master-2 with release notes URL: https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.57
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file skiapp-0.0.49.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Uploading chart file skiapp-0.0.57.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-8dch2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-h6z2l-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Promoting app skiapp version 0.0.49 to namespace **-staging
+Promoting app skiapp version 0.0.57 to namespace **-staging
 WARNING: 
 Created Pull Request: https://github.com/jenkins-oscar/environment-tequila-staging/pull/2
 Added label updatebot to Pull Request https://github.com/jenkins-oscar/environment-tequila-staging/pull/2
@@ -122,6 +122,5 @@ got git provider status pending from PR https://github.com/jenkins-oscar/environ
 got git provider status pending from PR https://github.com/jenkins-oscar/environment-tequila-staging/pull/2
 got git provider status pending from PR https://github.com/jenkins-oscar/environment-tequila-staging/pull/2
 got git provider status pending from PR https://github.com/jenkins-oscar/environment-tequila-staging/pull/2
-got git provider status pending from PR https://github.com/jenkins-oscar/environment-tequila-staging/pull/2
-Pull Request https://github.com/jenkins-oscar/environment-tequila-staging/pull/2 is merged at sha cc63b02ba08499c6b76cfdef803a6f52f93188dd
+Pull Request https://github.com/jenkins-oscar/environment-tequila-staging/pull/2 is merged at sha a64ce5bfde20e93c1017529a0ea48b9a07df5ed6
 Pull Request merged but we are not waiting for the update pipeline to complete!

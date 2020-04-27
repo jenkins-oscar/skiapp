@@ -1,0 +1,96 @@
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-dl7j5[0m
+{"level":"warn","ts":1588024103.6663475,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1588024103.6670728,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-g6hc5[0m
+{"level":"warn","ts":1588024104.7514548,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1588024104.7531397,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-master-rel-tgq58-qp5fj[0m
+{"level":"warn","ts":1588024112.9363475,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1588024114.125804,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ v0.0.80 in path /workspace/source"}
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:163782d1e7e5d25f4ed2b27f8b01619993a1ecf4
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN skiapp@1.0.0 No repository field.
+npm WARN skiapp@1.0.0 No license field.
+
+added 152 packages from 599 contributors and audited 269 packages in 4.625s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> skiapp@1.0.0 test /workspace/source
+> ./node_modules/mocha/bin/mocha tests/ --exit
+
+Server running at http://localhost:8080
+
+
+  GET Home page
+    ✓ Should return a 200 ok response
+
+
+  1 passing (47ms)
+
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0427 21:48:43.260775      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0427 21:48:43.264528      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/04/27 21:48:43 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2020/04/27 21:48:44 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] ENV PORT 8080                                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] WORKDIR /usr/src/app                         
+[36mINFO[0m[0001] cmd: workdir                                 
+[36mINFO[0m[0001] Changed working directory to /usr/src/app    
+[36mINFO[0m[0001] Creating directory /usr/src/app              
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0003] CMD ["npm", "start"]                         
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+2020/04/27 21:48:47 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/04/27 21:48:47 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/04/27 21:48:47 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/04/27 21:48:47 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/04/27 21:48:47 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/04/27 21:48:49 pushed blob: sha256:07aa29d7f668bc50fe64ee1215017ee1b648ef7ffd445f825fa55e4a70f932a4
+2020/04/27 21:48:49 pushed blob: sha256:5e16b5eebb23ef0d72805ab312d81772c695db28a7fa32c714cc81a764303ad6
+2020/04/27 21:48:49 pushed blob: sha256:e78e3f1422e5eb0f3790df5ea8caeebd99bf97a11dd3ac868b2d22190495396c
+2020/04/27 21:48:50 gcr.io/**-development/skiapp:0.0.80: digest: sha256:c253e2b98332bd57a541700ea8689188e9516b768148650ce573f140af1546de size: 1407
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-rel-tgq58-12[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+/bin/sh: line 0: cd: /workspace/source/charts/skiapp: No such file or directory
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-changelog'. The execution of the pipeline has stopped.[0m

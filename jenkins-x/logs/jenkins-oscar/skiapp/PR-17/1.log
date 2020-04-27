@@ -1,48 +1,48 @@
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-26cwb[0m
-{"level":"warn","ts":1588023161.3918715,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1588023161.3923614,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-qb9bq[0m
+{"level":"warn","ts":1588023368.1897213,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1588023368.1903522,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-b24cd[0m
-{"level":"warn","ts":1588023162.4055023,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1588023162.4071674,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-jjq65[0m
+{"level":"warn","ts":1588023368.7436082,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1588023368.7450771,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-pr-17-pr-b-bmd5p-2cssk[0m
-{"level":"warn","ts":1588023169.5132966,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1588023171.1443908,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ master in path /workspace/source"}
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-pr-17-pr-b-skzlt-hf97b[0m
+{"level":"warn","ts":1588023375.9015613,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1588023376.977964,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ master in path /workspace/source"}
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:0d9101961e485bfd52e3a29bf397b9dba7cacdf5,17:41cd33f28b70bd4821e253c22d1de2d1dd3ddf6a
 DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 41cd33f28b70bd4821e253c22d1de2d1dd3ddf6a: 0d9101961e485bfd52e3a29bf397b9dba7cacdf5:
 DEBUG: ran git fetch --unshallow origin 41cd33f28b70bd4821e253c22d1de2d1dd3ddf6a: 0d9101961e485bfd52e3a29bf397b9dba7cacdf5: in 
 DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
-DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
 DEBUG: ran git checkout master in 
-DEBUG: JX_LOG_LEVEL=error LC_ALL=C git reset --hard 0d9101961e485bfd52e3a29bf397b9dba7cacdf5
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 0d9101961e485bfd52e3a29bf397b9dba7cacdf5
 DEBUG: ran git reset --hard 0d9101961e485bfd52e3a29bf397b9dba7cacdf5 in 
 DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
 DEBUG: ran clean --force -d . in 
 DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 41cd33f28b70bd4821e253c22d1de2d1dd3ddf6a
 DEBUG: ran git merge 41cd33f28b70bd4821e253c22d1de2d1dd3ddf6a in 
-DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 0d9101961e485bfd52e3a29bf397b9dba7cacdf5..HEAD
-Merged SHA 2add9f2e2a2d75775b0fc29d65be37ad90af0fe2 with commit message 'Merge commit '41cd33f28b70bd4821e253c22d1de2d1dd3ddf6a'' into base branch master
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 0d9101961e485bfd52e3a29bf397b9dba7cacdf5..HEAD
+Merged SHA 1344d447b66675d035073e009a28e3e24aa97b9c with commit message 'Merge commit '41cd33f28b70bd4821e253c22d1de2d1dd3ddf6a'' into base branch master
 Merged SHA 41cd33f28b70bd4821e253c22d1de2d1dd3ddf6a with commit message 'deleted most nav items' into base branch master
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
 Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
 WARNING: failed to find Secret npm-token in namespace **
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
 npm WARN skiapp@1.0.0 No repository field.
 npm WARN skiapp@1.0.0 No license field.
 
-added 152 packages from 599 contributors and audited 269 packages in 4.836s
+added 152 packages from 599 contributors and audited 269 packages in 4.541s
 found 1 low severity vulnerability
   run `npm audit fix` to fix them, or `npm audit` for details
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
 
 > skiapp@1.0.0 test /workspace/source
 > ./node_modules/mocha/bin/mocha tests/ --exit
@@ -51,56 +51,53 @@ Server running at http://localhost:8080
 
 
   GET Home page
-    ✓ Should return a 200 ok response
+    ✓ Should return a 200 ok response (45ms)
 
 
-  1 passing (34ms)
+  1 passing (51ms)
 
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
-[36mINFO[0m[0000] Downloading base image node:9-slim           
-ERROR: logging before flag.Parse: E0427 21:33:01.428406      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-ERROR: logging before flag.Parse: E0427 21:33:01.432336      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
-2020/04/27 21:33:01 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
-[36mINFO[0m[0001] Downloading base image node:9-slim           
-2020/04/27 21:33:02 No matching credentials were found, falling back on anonymous
-[36mINFO[0m[0001] Executing 0 build triggers                   
-[36mINFO[0m[0001] cmd: EXPOSE                                  
-[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0001] Using files from context: [/workspace/source] 
-[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
-[36mINFO[0m[0001] Taking snapshot of full filesystem...        
-[36mINFO[0m[0001] ENV PORT 8080                                
-[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0001] EXPOSE 8080                                  
-[36mINFO[0m[0001] cmd: EXPOSE                                  
-[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0001] WORKDIR /usr/src/app                         
-[36mINFO[0m[0001] cmd: workdir                                 
-[36mINFO[0m[0001] Changed working directory to /usr/src/app    
-[36mINFO[0m[0001] Creating directory /usr/src/app              
-[36mINFO[0m[0001] Taking snapshot of files...                  
-[36mINFO[0m[0001] Using files from context: [/workspace/source] 
-[36mINFO[0m[0002] COPY . .                                     
-[36mINFO[0m[0002] Taking snapshot of files...                  
-[36mINFO[0m[0003] CMD ["npm", "start"]                         
-[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
-2020/04/27 21:33:05 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
-2020/04/27 21:33:05 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
-2020/04/27 21:33:05 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
-2020/04/27 21:33:05 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
-2020/04/27 21:33:05 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
-2020/04/27 21:33:07 pushed blob: sha256:c210ddd3124cf4163a5497c66d4465ba2a47f299f9053c76e2878f8f66de658f
-2020/04/27 21:33:07 pushed blob: sha256:80cc3afb14b1b7c712b7af62cb2bcef608f0c44eba73978020c43ef16c55b4ab
-2020/04/27 21:33:08 pushed blob: sha256:1129b356dc62fbff50b626bb1360dcd9ec51102c333507293b64fa628dd1a8cb
-2020/04/27 21:33:08 gcr.io/**-development/skiapp:0.0.0-SNAPSHOT-PR-17-1: digest: sha256:b256f3123d2eeabea7bf08c0f73f606a7d51e47d95869886c7ad484bb43b6cab size: 1407
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Retrieving image manifest node:9-slim        
+ERROR: logging before flag.Parse: E0427 21:36:25.857217       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0427 21:36:25.862546       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Checking for cached layer gcr.io/**-development/cache:f9f7a7c862283e0618301b67a9a943889bdeb7093e06d9c629919b8ef77629c5... 
+[36mINFO[0m[0004] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0004] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0009] Taking snapshot of full filesystem...        
+[36mINFO[0m[0011] Resolving paths                              
+[36mINFO[0m[0013] ENV PORT 8080                                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] EXPOSE 8080                                  
+[36mINFO[0m[0013] cmd: EXPOSE                                  
+[36mINFO[0m[0013] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] WORKDIR /usr/src/app                         
+[36mINFO[0m[0013] cmd: workdir                                 
+[36mINFO[0m[0013] Changed working directory to /usr/src/app    
+[36mINFO[0m[0013] Creating directory /usr/src/app              
+[36mINFO[0m[0013] Resolving paths                              
+[36mINFO[0m[0013] Taking snapshot of files...                  
+[36mINFO[0m[0013] COPY . .                                     
+[36mINFO[0m[0014] Resolving paths                              
+[36mINFO[0m[0014] Taking snapshot of files...                  
+[36mINFO[0m[0015] CMD ["npm", "start"]                         
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] Pushing layer gcr.io/**-development/cache:f9f7a7c862283e0618301b67a9a943889bdeb7093e06d9c629919b8ef77629c5 to cache now 
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
 sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-17-1/" Chart.yaml
 sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-17-1/" ../*/Chart.yaml
 sed -i -e "s|repository:.*|repository: gcr.io\/**-development\/skiapp|" values.yaml
@@ -116,7 +113,7 @@ WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenk
 Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
 Successfully added Helm repository chartmuseum.jenkins-x.io.
 
-Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-bmd5p-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Showing logs for build [32mjenkins-oscar-skiapp-pr-17-pr-b-skzlt-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
 Creating a preview
 Found commit author match for: sharepointoscar with email address: me@sharepointoscar.com
 Created environment jenkins-oscar-skiapp-pr-17
@@ -126,7 +123,7 @@ expose:
     helm.sh/hook: post-install,post-upgrade
     helm.sh/hook-delete-policy: hook-succeeded
   config:
-    domain: 35.197.97.96.nip.io
+    domain: c**d.sharepointoscar.com
     exposer: Ingress
     http: "true"
 preview:
@@ -135,5 +132,14 @@ preview:
     tag: 0.0.0-SNAPSHOT-PR-17-1
 
 Updating PipelineActivities jenkins-oscar-skiapp-pr-17-1 which has status Running
-WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.35.197.97.96.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.252573036s
-Preview application is now available at: http://skiapp.**-jenkins-oscar-skiapp-pr-17.35.197.97.96.nip.io
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 1.094808598s
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 1.292708221s
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 2.927373846s
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 4.019081057s
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 2.964197569s
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 8.543690371s
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 5.727696515s
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 11.510041659s
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 18.756003535s
+WARNING: preview application http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com not available, error was Get http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com: dial tcp: lookup skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com on 10.27.240.10:53: no such host, delaying for: 56.048646251s
+Preview application is now available at: http://skiapp.**-jenkins-oscar-skiapp-pr-17.c**d.sharepointoscar.com

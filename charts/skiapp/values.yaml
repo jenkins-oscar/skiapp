@@ -49,8 +49,14 @@ service:
   externalPort: 80
   internalPort: 8080
   annotations:
-    fabric8.io/expose: "true"
-    fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
+   getambassador.io/config: |
+      ---
+      apiVersion: ambassador/v1
+      kind: Mapping
+      name: skiapp-service_mapping
+      host: skiapp.dev.sharepointoscar.com
+      prefix: /
+      service: skiapp:80
 resources:
   limits:
     cpu: 400m

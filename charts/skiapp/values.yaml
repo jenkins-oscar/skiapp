@@ -49,14 +49,14 @@ service:
   externalPort: 80
   internalPort: 8080
   annotations:
-   getambassador.io/config: |
-      ---
-      apiVersion: ambassador/v1
-      kind: Mapping
-      name: skiapp-service_mapping
-      host: skiapp.dev.sharepointoscar.com
-      prefix: /
-      service: skiapp:80
+    getambassador.io/config: |
+        ---
+        apiVersion: ambassador/v1
+        kind: Mapping
+        name: skiapp-service_mapping
+        host: skiapp.dev.sharepointoscar.com
+        prefix: /
+        service: skiapp:80
 resources:
   limits:
     cpu: 400m

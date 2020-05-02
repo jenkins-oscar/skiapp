@@ -1,0 +1,12 @@
+apiVersion: getambassador.io/v2
+kind: FilterPolicy
+metadata:
+  name: azure-skiapp-policy
+  namespace: jx-staging
+spec:
+  rules:
+      # Requires authentication on requests from hostname
+    - host: "skiapp.dev.sharepointoscar.com"
+      path: "*"
+      filters:
+        - name: azure-skiapp-ad

@@ -1,0 +1,12 @@
+apiVersion: getambassador.io/v2
+kind: Filter
+metadata:
+  name: azure-skiapp-ad
+  namespace: jx-staging
+spec:
+  OAuth2:
+    authorizationURL: https://login.microsoftonline.com/<AD_TENANT_ID>/v2.0  ## URL where Ambassador Edge Stack can find OAuth2 descriptor
+    clientID: <APP_CLIENT_ID> ## OAuth2 client from your IdP
+    secret: <APP_SECRET> ## Secret used to access OAuth2 client
+    protectedOrigins:
+    - origin: https://skiapp.dev.sharepointoscar.com

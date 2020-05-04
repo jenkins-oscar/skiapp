@@ -1,9 +1,16 @@
 # Protect Apps Deployed with Jenkins X using Ambassador
 
+Microservice orchestrated by Kubernetes sometimes need not be public facing.  
+
+There are many options to secure an end point, however, in this post we walk through configuring Datawire's Ambassador Gateway to protect an app which has been put through CI/CD and published via Jenkins X.  We enable SSO to leverage existing identitiy management using Azure Active Directory all in AWS and EKS.
+
+
 
 ## Setup Ambasador
+Setup Ambassador link goes here.
 
 ### Create AD App Registration
+Setup Azure App Registration link goes here.
 
 ### Configure Filter
 
@@ -85,4 +92,5 @@ service:
 ```
 
 # Summary
+We now have an app which was put through CI/CD using Jenkins X - protected using Ambassador, and using SSO backed by Azure Active Directory.  You can use Okta or any other IdP you environment uses, as long as it is using OAuth2 in this case.
 

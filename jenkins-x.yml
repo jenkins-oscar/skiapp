@@ -6,3 +6,5 @@ pipelineConfig:
           configMapKeyRef:
             key: docker.registry
             name: jenkins-x-docker-registry
+    - name: JENKINS_X_DOCKER_REGISTRY_SERVICE_PORT
+      value: "8080"

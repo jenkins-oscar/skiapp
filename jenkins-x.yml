@@ -1,1 +1,11 @@
 buildPack: javascript
+pipelineConfig:
+  pipelines:
+    release:
+      pipeline:
+        environment:
+          - name: JENKINS_X_DOCKER_REGISTRY_SERVICE_HOST
+            valueFrom:
+                configMapKeyRef:
+                  key: docker.registry
+                  name: jenkins-x-docker-registry

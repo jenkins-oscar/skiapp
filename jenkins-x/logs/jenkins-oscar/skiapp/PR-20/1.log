@@ -1,0 +1,102 @@
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-cjnvh[0m
+{"level":"warn","ts":1589403377.163048,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589403377.1635249,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-ld7gd[0m
+{"level":"warn","ts":1589403378.5841095,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589403378.585823,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-pr-20-pr-b-bnxst-x6zzk[0m
+{"level":"warn","ts":1589403385.6864064,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589403386.7501128,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:2f7d10fb451befa1e51a8a1714c248bda730deaa,20:2de5ecc7429263ae8b1f06a72fd460353781e214
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 2de5ecc7429263ae8b1f06a72fd460353781e214: 2f7d10fb451befa1e51a8a1714c248bda730deaa:
+DEBUG: ran git fetch --unshallow origin 2de5ecc7429263ae8b1f06a72fd460353781e214: 2f7d10fb451befa1e51a8a1714c248bda730deaa: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 2f7d10fb451befa1e51a8a1714c248bda730deaa
+DEBUG: ran git reset --hard 2f7d10fb451befa1e51a8a1714c248bda730deaa in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 2de5ecc7429263ae8b1f06a72fd460353781e214
+DEBUG: ran git merge 2de5ecc7429263ae8b1f06a72fd460353781e214 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 2f7d10fb451befa1e51a8a1714c248bda730deaa..HEAD
+Merged SHA 2de5ecc7429263ae8b1f06a72fd460353781e214 with commit message 'adding global var for pipeline' into base branch master
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN skiapp@1.0.0 No repository field.
+npm WARN skiapp@1.0.0 No license field.
+
+added 152 packages from 599 contributors and audited 152 packages in 4.325s
+found 4 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> skiapp@1.0.0 test /workspace/source
+> ./node_modules/mocha/bin/mocha tests/ --exit
+
+Server running at http://localhost:8080
+
+
+  GET Home page
+    ✓ Should return a 200 ok response
+
+
+  1 passing (40ms)
+
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0513 20:56:36.647827      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0513 20:56:36.651499      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/05/13 20:56:36 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2020/05/13 20:56:37 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] ENV PORT 8080                                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] WORKDIR /usr/src/app                         
+[36mINFO[0m[0001] cmd: workdir                                 
+[36mINFO[0m[0001] Changed working directory to /usr/src/app    
+[36mINFO[0m[0001] Creating directory /usr/src/app              
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0003] CMD ["npm", "start"]                         
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+2020/05/13 20:56:40 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/05/13 20:56:40 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/05/13 20:56:40 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/05/13 20:56:40 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/05/13 20:56:40 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/05/13 20:56:42 pushed blob: sha256:838ece1df47b9b7b6237c7816d6b6129582182d73ac460f9d0c89dbea90ea7e9
+2020/05/13 20:56:42 pushed blob: sha256:314662ada23abd2ecc430d3071528272811f52087199e9d6154277f06ea00167
+2020/05/13 20:56:44 pushed blob: sha256:a3ca670c5e526bd38e886e6c8f834b756fbe16cf5bd37316f49affa32c0f3b32
+2020/05/13 20:56:45 gcr.io/**-development/skiapp:0.0.0-SNAPSHOT-PR-20-1: digest: sha256:6afbd1f92f941e9b051a31a254ef169b3513cc3a31a42e0ac3f86e4b0424d197 size: 1407
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-bnxst-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+error: error adding image to CVE provider: no JENKINS_X_DOCKER_REGISTRY_SERVICE_PORT env var found
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-postbuild-post-build'. The execution of the pipeline has stopped.[0m

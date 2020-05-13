@@ -1,127 +1,41 @@
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-kzktd[0m
-{"level":"warn","ts":1588371013.7884922,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1588371013.7894206,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-dljjg-3[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-wzhbf[0m
+{"level":"warn","ts":1589403020.4367855,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589403020.4373877,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-jvpcr[0m
-{"level":"warn","ts":1588371014.6864696,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1588371014.7007992,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-dljjg-3[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-j68q4[0m
+{"level":"warn","ts":1589403021.3462965,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589403021.3489542,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-dljjg-3[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-master-rel-xp7bm-cqjtz[0m
-{"level":"warn","ts":1588371022.8566146,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1588371023.996016,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ v0.0.85 in path /workspace/source"}
+Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-dljjg-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-jenkins-oscar-skiapp-maste-dljjg-x2ldz[0m
+{"level":"warn","ts":1589403027.4683697,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589403028.4932554,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ 2f7d10fb451befa1e51a8a1714c248bda730deaa in path /workspace/source"}
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:0c43c4b9cfda5a82e6deae9c810d1e601a6599dd
+Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-dljjg-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:2f7d10fb451befa1e51a8a1714c248bda730deaa
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
-Generated Git credentials file /workspace/xdg_config/git/credentials
+Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-dljjg-3[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
-Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
-WARNING: failed to find Secret npm-token in namespace **
+Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-dljjg-3[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Effective pipeline written to jenkins-x-release-effective.yml
 
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
-npm WARN skiapp@1.0.0 No repository field.
-npm WARN skiapp@1.0.0 No license field.
+Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-dljjg-3[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
 
-added 152 packages from 599 contributors and audited 269 packages in 4.15s
-found 4 low severity vulnerabilities
-  run `npm audit fix` to fix them, or `npm audit` for details
-
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
-
-> skiapp@1.0.0 test /workspace/source
-> ./node_modules/mocha/bin/mocha tests/ --exit
-
-Server running at http://localhost:8080
-
-
-  GET Home page
-    ✓ Should return a 200 ok response (53ms)
-
-
-  1 passing (59ms)
-
-
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
-[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
-[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
-[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
-[36mINFO[0m[0000] Retrieving image manifest node:9-slim        
-ERROR: logging before flag.Parse: E0501 22:10:34.251758       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
-ERROR: logging before flag.Parse: E0501 22:10:34.256005       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
-[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
-[36mINFO[0m[0002] Built cross stage deps: map[]                
-[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
-[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
-[36mINFO[0m[0003] cmd: EXPOSE                                  
-[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0004] Checking for cached layer gcr.io/**-development/cache:678a480726d305685fddde8ede2ff3b93797b72165a7c2b089b22c308a3b71c0... 
-[36mINFO[0m[0004] No cached layer found for cmd COPY . .       
-[36mINFO[0m[0004] Unpacking rootfs as cmd COPY . . requires it. 
-[36mINFO[0m[0010] Taking snapshot of full filesystem...        
-[36mINFO[0m[0011] Resolving paths                              
-[36mINFO[0m[0013] ENV PORT 8080                                
-[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0013] EXPOSE 8080                                  
-[36mINFO[0m[0013] cmd: EXPOSE                                  
-[36mINFO[0m[0013] Adding exposed port: 8080/tcp                
-[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0013] WORKDIR /usr/src/app                         
-[36mINFO[0m[0013] cmd: workdir                                 
-[36mINFO[0m[0013] Changed working directory to /usr/src/app    
-[36mINFO[0m[0013] Creating directory /usr/src/app              
-[36mINFO[0m[0013] Resolving paths                              
-[36mINFO[0m[0013] Taking snapshot of files...                  
-[36mINFO[0m[0013] COPY . .                                     
-[36mINFO[0m[0014] Resolving paths                              
-[36mINFO[0m[0014] Taking snapshot of files...                  
-[36mINFO[0m[0015] CMD ["npm", "start"]                         
-[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
-[36mINFO[0m[0015] Pushing layer gcr.io/**-development/cache:678a480726d305685fddde8ede2ff3b93797b72165a7c2b089b22c308a3b71c0 to cache now 
-
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
-no CVE provider running in the current ** namespace so skip adding image to be analysed
-
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
-Converted /workspace/source/charts/skiapp to an unshallow repository
-Generating change log from git ref 98be7040951cebad4832d16f3ccaa49e8e926ffe => 6de4a01d30a102ef93457b97454e8444f5d2beac
-WARNING: Failed to enrich commit c2b195c4d74330209cb63bed75da78536e5330a0 with issues: selected more than one user from users.jenkins.io: [sharepointoscar x-0]
-WARNING: Failed to enrich commit c2b195c4d74330209cb63bed75da78536e5330a0 with issues: selected more than one user from users.jenkins.io: [sharepointoscar x-0]
-Finding issues in commit messages using git format
-WARNING: No release found for jenkins-oscar/skiapp and tag v0.0.85 so creating a new release
-Updated the release information at https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.85
-generated: /workspace/source/charts/skiapp/templates/release.yaml
-Created Release skiapp-0-0-85 resource in namespace **
-Updating PipelineActivity jenkins-oscar-skiapp-master-3 with version 0.0.85
-Updated PipelineActivities jenkins-oscar-skiapp-master-3 with release notes URL: https://github.com/jenkins-oscar/skiapp/releases/tag/v0.0.85
-
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
-WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
-Successfully added Helm repository storage.googleapis.com.
-Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
-Successfully added Helm repository jenkins-x-chartmuseum.
-WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file skiapp-0.0.85.tgz to http://jenkins-x-chartmuseum:8080/api/charts
-Received 201 response: {"saved":true}
-
-Showing logs for build [32mjenkins-oscar-skiapp-master-rel-xp7bm-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
-WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
-WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Promoting app skiapp version 0.0.85 to namespace **-staging
-WARNING: 
-Created Pull Request: https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/7
-Added label updatebot to Pull Request https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/7
-got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/7
-got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/7
-got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/7
-got git provider status pending from PR https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/7
-WARNING: Failed to merge the Pull Request https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/7 due to PUT https://api.github.com/repos/jenkins-oscar/environment-tia-tequila-staging/pulls/7/merge: 405 Base branch was modified. Review and try the merge again. [] maybe I don't have karma?
-Pull Request https://github.com/jenkins-oscar/environment-tia-tequila-staging/pull/7 is merged at sha a0eb36e1e45f6d946f15a0edd4b8e5e0059a3885
-Pull Request merged but we are not waiting for the update pipeline to complete!
-WARNING: Could not find the service URL in namespace **-staging for names skiapp, **-skiapp, **-staging-skiapp
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/skiapp/Chart.yaml to 0.0.89
+Updating repository in charts/skiapp/values.yaml to gcr.io/**-development/skiapp
+Updating tag in charts/skiapp/values.yaml to 0.0.89
+error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
+: git output: To https://github.com/jenkins-oscar/skiapp.git
+ ! [remote rejected] v0.0.89 -> v0.0.89 (cannot lock ref 'refs/tags/v0.0.89': reference already exists)
+error: failed to push some refs to 'https://github.com/jenkins-oscar/skiapp.git': failed to run 'git push origin v0.0.89' command in directory '', output: 'To https://github.com/jenkins-oscar/skiapp.git
+ ! [remote rejected] v0.0.89 -> v0.0.89 (cannot lock ref 'refs/tags/v0.0.89': reference already exists)
+error: failed to push some refs to 'https://github.com/jenkins-oscar/skiapp.git''
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step tag --version $(cat VERSION)' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m

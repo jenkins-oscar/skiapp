@@ -1,0 +1,139 @@
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-bkgwd[0m
+{"level":"warn","ts":1589481989.6906612,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589481989.6915462,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-2lp5m[0m
+{"level":"warn","ts":1589481990.6579883,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589481990.660037,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-pr-20-pr-b-grkjf-n6bpz[0m
+{"level":"warn","ts":1589481999.904533,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589482001.0430112,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:2f7d10fb451befa1e51a8a1714c248bda730deaa,20:fc4fdd887b2addf8ea08cdb244c565244ecc2789
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow fc4fdd887b2addf8ea08cdb244c565244ecc2789: 2f7d10fb451befa1e51a8a1714c248bda730deaa:
+DEBUG: ran git fetch --unshallow origin fc4fdd887b2addf8ea08cdb244c565244ecc2789: 2f7d10fb451befa1e51a8a1714c248bda730deaa: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 2f7d10fb451befa1e51a8a1714c248bda730deaa
+DEBUG: ran git reset --hard 2f7d10fb451befa1e51a8a1714c248bda730deaa in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge fc4fdd887b2addf8ea08cdb244c565244ecc2789
+DEBUG: ran git merge fc4fdd887b2addf8ea08cdb244c565244ecc2789 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 2f7d10fb451befa1e51a8a1714c248bda730deaa..HEAD
+Merged SHA fc4fdd887b2addf8ea08cdb244c565244ecc2789 with commit message 'adding p flag' into base branch master
+Merged SHA d409b85836eee17cdcd9517ae4173505d8e5dcde with commit message 'replacing entire postbuild' into base branch master
+Merged SHA feb071fb0259bfcb05bdbfd6794e42fb44e1069b with commit message 'scanning image' into base branch master
+Merged SHA 844178eeecc95da0af48256422823ec2b98ed4f9 with commit message 'adding slash for policy file ref' into base branch master
+Merged SHA d6b9d4a2ac01d56460c631f8884c5820a13ac936 with commit message 'adding output removed extra char' into base branch master
+Merged SHA ce0b7bd59b51ceed7d3a7ff4bee37d7ead236840 with commit message 'refactored pipeline' into base branch master
+Merged SHA b7ef0e5eff6cf9dc8a8ef2dba9745973146d6711 with commit message 'using postBuild stage' into base branch master
+Merged SHA 84f32c1af6412f8f06c8465aee51b666f9dc36d1 with commit message 'changing to scan before post-build-post-build task' into base branch master
+Merged SHA d167111c42b9f55a6b5ec543e87793995ef2cc7f with commit message 'adding env vars' into base branch master
+Merged SHA 4f58a8561edf48271fa5ef42623f5b1825d663c6 with commit message 'appending step to scan image after build' into base branch master
+Merged SHA 3bcb98c6b18cf817ac677b1f554bc9531a2543b5 with commit message 'changed registry to port 80' into base branch master
+Merged SHA 3491021e00a26e0dd6c647b7b753add237ba9288 with commit message 'added registry port env var' into base branch master
+Merged SHA 1c3115a4c3e4fd80e15ae0186e28ffa651d918a5 with commit message 'added registry port env var' into base branch master
+Merged SHA 2de5ecc7429263ae8b1f06a72fd460353781e214 with commit message 'adding global var for pipeline' into base branch master
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN skiapp@1.0.0 No repository field.
+npm WARN skiapp@1.0.0 No license field.
+
+added 152 packages from 599 contributors and audited 152 packages in 4.503s
+found 4 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> skiapp@1.0.0 test /workspace/source
+> ./node_modules/mocha/bin/mocha tests/ --exit
+
+Server running at http://localhost:8080
+
+
+  GET Home page
+    ✓ Should return a 200 ok response
+
+
+  1 passing (55ms)
+
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0514 18:46:50.792008      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0514 18:46:50.795881      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/05/14 18:46:50 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2020/05/14 18:46:51 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0002] ENV PORT 8080                                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] EXPOSE 8080                                  
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] WORKDIR /usr/src/app                         
+[36mINFO[0m[0002] cmd: workdir                                 
+[36mINFO[0m[0002] Changed working directory to /usr/src/app    
+[36mINFO[0m[0002] Creating directory /usr/src/app              
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0003] Taking snapshot of files...                  
+[36mINFO[0m[0004] CMD ["npm", "start"]                         
+[36mINFO[0m[0004] No files changed in this command, skipping snapshotting. 
+2020/05/14 18:46:55 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/05/14 18:46:55 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/05/14 18:46:55 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/05/14 18:46:55 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/05/14 18:46:55 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/05/14 18:46:56 pushed blob: sha256:8048d545d57995947845a192d33b1898385e4545b1d7c37b8e833d5e8b29f9c0
+2020/05/14 18:46:57 pushed blob: sha256:6d92ca31d504936750c68b7ae22e831c6e00e8dd8c5ac09b03a06a037b1616a7
+2020/05/14 18:46:58 pushed blob: sha256:d838abfe161b79c5ac29cdb1eee07a75f24e4796d5fb94ff98390579271930cf
+2020/05/14 18:46:58 gcr.io/**-development/skiapp:0.0.0-SNAPSHOT-PR-20-13: digest: sha256:ed370afca31f9ae20d75c18bdda65de82f84a6e672dac75aed42a59f8218094d size: 1407
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step6[0m
+============================== start replacing postBuild ====================================
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step7[0m
+============================== gcr.io//skiapp:0.0.0-SNAPSHOT-PR-20-13 ==============================
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step8[0m
+============================== ******* bout to do its thang ====================================
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-grkjf-13[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-anchore-image-scan-boi[0m
+Pulling image -- gcr.io//skiapp:0.0.0-SNAPSHOT-PR-20-13
+invalid reference format
+
+WARNING - Please pull remote image, or build/tag all local images before attempting analysis again
+
+
+	ERROR - no local docker images specified in script input: bash gcr.io//skiapp:0.0.0-SNAPSHOT-PR-20-13
+
+
+Anchore Engine Inline Scanner/Analyzer --
+
+  Wrapper script for performing vulnerability scan or image analysis on local docker images, utilizing the Anchore Engine inline_scan container.
+  For more detailed usage instructions use the -h option after specifying scan or analyze.
+
+    Usage: bash <scan|analyze> [ OPTIONS ]
+
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-postbuild-anchore-image-scan-boi'. The execution of the pipeline has stopped.[0m

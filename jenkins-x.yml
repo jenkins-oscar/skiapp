@@ -1,21 +1,16 @@
 buildPack: javascript
 pipelineConfig:
-    env:
-    - name: JENKINS_X_DOCKER_REGISTRY_SERVICE_HOST
-      valueFrom:
-          configMapKeyRef:
-            key: docker.registry
-            name: jenkins-x-docker-registry
-    - name: JENKINS_X_DOCKER_REGISTRY_SERVICE_PORT
-      value: "80"
-    pipelines:
-        overrides:
-        - name: postbuild-post-build
-          pipeline: pullRequest
-          stage: postBuild
-          steps:
-          - name: anchore-postbuild-start
-            sh: echo =========================== anchore start image scan  ===========================
-          - name: anchore-scan-image
-            sh: curl -s https://ci-tools.anchore.io/inline_scan-v0.6.0 | bash -s -- -d Dockerfile -b .anchore_policy.json $DOCKER_REGISTRY/$ORG/$APP_NAME:$VERSION'
-          type: before
+  env:
+  - name: JENKINS_X_DOCKER_REGISTRY_SERVICE_HOST
+    valueFrom:
+      configMapKeyRef:
+        key: docker.registry
+        name: jenkins-x-docker-registry
+  - name: JENKINS_X_DOCKER_REGISTRY_SERVICE_PORT
+    value: "80"
+  pipelines:
+    pullRequest:
+      postBuild:
+        preSteps:
+        - command: curl -s https://ci-tools.anchore.io/inline_scan-v0.6.0 | bash -s -- -d Dockerfile -b .anchore_policy.json $DOCKER_REGISTRY/$ORG/$APP_NAME:$VERSION'
+          name: anchore-image-scan-boi

@@ -12,7 +12,7 @@ pipelineConfig:
         overrides:
         - name: postbuild-post-build
           pipeline: pullRequest
-          stage: build
+          stage: postBuild
           steps:
           - name: anchore-postbuild-start
             sh: echo =========================== anchore start image scan  ===========================

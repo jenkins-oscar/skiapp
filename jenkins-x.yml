@@ -14,12 +14,15 @@ pipelineConfig:
         replace: true
         steps:
         - command: echo ============================== start replacing postBuild ====================================
-        - command: echo ============================== $DOCKER_REGISTRY/$REPO_OWNER/$APP_NAME:$PREVIEW_VERSION ==============================
-        - command: jx step post build --image $DOCKER_REGISTRY/$REPO_OWNER/$APP_NAME:$PREVIEW_VERSION
+          name: anchore-starting-postbuild
+        - command: echo ============================== $DOCKER_REGISTRY/$ORG/$APP_NAME:$PREVIEW_VERSION ==============================
+          name: anchore-outpout-image-path
+        - command: jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:$PREVIEW_VERSION
           dir: /workspace/source
           image: nodejs
           name: postbuild-post-build
-        - command: echo ============================== anchore bout to do its thang  ====================================
-        - command: curl -s https://ci-tools.anchore.io/inline_scan-v0.6.0 | bash -s -- -r -p $DOCKER_REGISTRY/$REPO_OWNER/$APP_NAME:$PREVIEW_VERSION
-          name: anchore-image-scan-boi
-        - command: echo ============================== end replacing postBuild ====================================
+        - command: echo ============================== start anchore image scan  ====================================
+        - command: curl -s https://ci-tools.anchore.io/inline_scan-v0.6.0 | bash -s -- -r -p $DOCKER_REGISTRY/$ORG/$APP_NAME:$PREVIEW_VERSION
+          name: anchore-image-scan
+        - command: echo ============================== end anchore image scan ====================================
+          name: anchore-end-postbuild       

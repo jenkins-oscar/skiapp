@@ -18,4 +18,4 @@ pipelineConfig:
             sh: echo =========================== anchore start image scan  ===========================
           - name: anchore-scan-image
             sh: curl -s https://ci-tools.anchore.io/inline_scan-v0.6.0 | bash -s -- -d Dockerfile -b .anchore_policy.json $DOCKER_REGISTRY/$ORG/$APP_NAME:$VERSION'
-          type: after
+          type: before

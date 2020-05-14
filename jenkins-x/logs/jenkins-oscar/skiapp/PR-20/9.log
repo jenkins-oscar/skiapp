@@ -1,0 +1,134 @@
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-cfdl4[0m
+{"level":"warn","ts":1589417169.3926659,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589417169.3932853,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-rtd2t[0m
+{"level":"warn","ts":1589417170.4001884,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1589417170.412256,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-pr-20-pr-b-9lwm8-7ljw7[0m
+{"level":"warn","ts":1589417178.67297,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1589417179.7129881,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:2f7d10fb451befa1e51a8a1714c248bda730deaa,20:d6b9d4a2ac01d56460c631f8884c5820a13ac936
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow d6b9d4a2ac01d56460c631f8884c5820a13ac936: 2f7d10fb451befa1e51a8a1714c248bda730deaa:
+DEBUG: ran git fetch --unshallow origin d6b9d4a2ac01d56460c631f8884c5820a13ac936: 2f7d10fb451befa1e51a8a1714c248bda730deaa: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 2f7d10fb451befa1e51a8a1714c248bda730deaa
+DEBUG: ran git reset --hard 2f7d10fb451befa1e51a8a1714c248bda730deaa in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git merge d6b9d4a2ac01d56460c631f8884c5820a13ac936
+DEBUG: ran git merge d6b9d4a2ac01d56460c631f8884c5820a13ac936 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 2f7d10fb451befa1e51a8a1714c248bda730deaa..HEAD
+Merged SHA d6b9d4a2ac01d56460c631f8884c5820a13ac936 with commit message 'adding output removed extra char' into base branch master
+Merged SHA ce0b7bd59b51ceed7d3a7ff4bee37d7ead236840 with commit message 'refactored pipeline' into base branch master
+Merged SHA b7ef0e5eff6cf9dc8a8ef2dba9745973146d6711 with commit message 'using postBuild stage' into base branch master
+Merged SHA 84f32c1af6412f8f06c8465aee51b666f9dc36d1 with commit message 'changing to scan before post-build-post-build task' into base branch master
+Merged SHA d167111c42b9f55a6b5ec543e87793995ef2cc7f with commit message 'adding env vars' into base branch master
+Merged SHA 4f58a8561edf48271fa5ef42623f5b1825d663c6 with commit message 'appending step to scan image after build' into base branch master
+Merged SHA 3bcb98c6b18cf817ac677b1f554bc9531a2543b5 with commit message 'changed registry to port 80' into base branch master
+Merged SHA 3491021e00a26e0dd6c647b7b753add237ba9288 with commit message 'added registry port env var' into base branch master
+Merged SHA 1c3115a4c3e4fd80e15ae0186e28ffa651d918a5 with commit message 'added registry port env var' into base branch master
+Merged SHA 2de5ecc7429263ae8b1f06a72fd460353781e214 with commit message 'adding global var for pipeline' into base branch master
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN skiapp@1.0.0 No repository field.
+npm WARN skiapp@1.0.0 No license field.
+
+added 152 packages from 599 contributors and audited 152 packages in 4.36s
+found 4 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> skiapp@1.0.0 test /workspace/source
+> ./node_modules/mocha/bin/mocha tests/ --exit
+
+Server running at http://localhost:8080
+
+
+  GET Home page
+    ✓ Should return a 200 ok response
+
+
+  1 passing (39ms)
+
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E0514 00:46:28.781110      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0514 00:46:28.784456      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/05/14 00:46:28 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image node:9-slim           
+2020/05/14 00:46:29 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] ENV PORT 8080                                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] WORKDIR /usr/src/app                         
+[36mINFO[0m[0001] cmd: workdir                                 
+[36mINFO[0m[0001] Changed working directory to /usr/src/app    
+[36mINFO[0m[0001] Creating directory /usr/src/app              
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0002] COPY . .                                     
+[36mINFO[0m[0003] Taking snapshot of files...                  
+[36mINFO[0m[0003] CMD ["npm", "start"]                         
+[36mINFO[0m[0003] No files changed in this command, skipping snapshotting. 
+2020/05/14 00:46:32 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2020/05/14 00:46:32 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2020/05/14 00:46:32 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2020/05/14 00:46:32 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2020/05/14 00:46:32 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2020/05/14 00:46:34 pushed blob: sha256:bf2052fe6c4bef7dc0f915e2757788ad5d75e59a6bb49de44b6838307b6ae604
+2020/05/14 00:46:34 pushed blob: sha256:35761df4b234f07aeefa0fb749acdf0820b2bbb625545d01804331fcf1b358b4
+2020/05/14 00:46:35 pushed blob: sha256:35f67b70d54111155e1287f1b2b5fc027f720ac17b7a17bbb5b4b5dd89d7d939
+2020/05/14 00:46:36 gcr.io/**-development/skiapp:0.0.0-SNAPSHOT-PR-20-9: digest: sha256:0fd5d53aeb051be6ea41368f2949a841e00eeb9ce43041e3faaddb6c21ccea8f size: 1407
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step6[0m
+============================== ******* bout to do its thang ====================================
+
+Showing logs for build [32mjenkins-oscar-skiapp-pr-20-pr-b-9lwm8-9[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-anchore-image-scan-boi[0m
+
+	ERROR - Policy Bundle: .*******_policy.json does not exist
+
+
+Anchore Engine Inline Scan --
+
+  Script for performing vulnerability scan on local docker images, utilizing the Anchore Engine inline_scan container.
+  Multiple images can be passed for scanning if a Dockerfile is not specified. 
+
+  Images should be built & tagged locally, or remote images can be pulled with the -p option.
+
+    Usage: bash [ OPTIONS ] <FULL_IMAGE_TAG_1> <FULL_IMAGE_TAG_2> <....>
+
+      -b <PATH>  [optional] Path to local Anchore policy bundle (ex: -b ./policy_bundle.json)
+      -d <PATH>  [optional] Path to local Dockerfile (ex: -d ./dockerfile)
+      -t <TEXT>  [optional] Specify timeout for image scanning in seconds. Defaults to 300s. (ex: -t 500)
+      -f  [optional] Exit script upon failed Anchore policy evaluation
+      -p  [optional] Pull remote docker images
+      -r  [optional] Generate analysis reports in your current working directory
+      -V  [optional] Increase verbosity
+
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-postbuild-anchore-image-scan-boi'. The execution of the pipeline has stopped.[0m

@@ -7,7 +7,7 @@ chaiHttp= require('chai-http'),
  chai.use(chaiHttp);
 
 
-describe("GET Home page", () => {
+describe("GET Home page test", () => {
     // Test to get all students record
     it("Should return a 200 ok response", (done) => {
          chai.request(app)

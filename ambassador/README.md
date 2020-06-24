@@ -117,7 +117,7 @@ The cluster configuration repository is cloned immediately.  This repository wil
 
 
 
-### Setup Ambasador Edge Stack
+# Setup Ambasador Edge Stack
 
 To setup Ambassador, you can follow the simple instructions on their wonderful [Docs site](https://www.getambassador.io/docs/latest/topics/install/).
 

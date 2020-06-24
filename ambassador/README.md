@@ -172,7 +172,7 @@ spec:
 ```
 
 # Import App Into Jenkins X
-Import app from GitHub as follows.
+Import app from GitHub as follows.  NOTE:  Please make sure to fork the app before importing it.  You are effectively importing it from your own GitHub Organization.
 
 ```bash
 jx import --url <GITHUB_REPO_URL>

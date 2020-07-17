@@ -1,41 +1,93 @@
 
-Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-z68pt-2[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-d4pjt[0m
-{"level":"warn","ts":1588370459.0787013,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1588370459.0792015,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-phpg7[0m
+{"level":"warn","ts":1594946982.907907,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1594946982.908732,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-z68pt-2[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-4s6g9[0m
-{"level":"warn","ts":1588370460.3856785,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1588370460.3903568,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-q9f6v[0m
+{"level":"warn","ts":1594946983.7763956,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1594946983.778038,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-z68pt-2[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-z68pt-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-jenkins-oscar-skiapp-maste-z68pt-kxl8g[0m
-{"level":"warn","ts":1588370466.5304637,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1588370468.1934156,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ c77c7da1e80ed249d40260ba69fe6dc767f963b7 in path /workspace/source"}
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkins-oscar-skiapp-master-c5bl2-bhrzn[0m
+{"level":"warn","ts":1594947022.833333,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1594947024.333152,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jenkins-oscar/skiapp.git @ v0.0.96 in path /workspace/source"}
 
-Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-z68pt-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:c77c7da1e80ed249d40260ba69fe6dc767f963b7
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:91b09c71ea0e35d8365a9e490a0be56909a3f691
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-z68pt-2[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
-SKIP merge-pull-refs: Nothing to merge
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-z68pt-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
-Effective pipeline written to jenkins-x-release-effective.yml
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
 
-Showing logs for build [32mmeta-jenkins-oscar-skiapp-maste-z68pt-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
-running command: echo \$(**-release-version) > VERSION
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN skiapp@1.0.0 No repository field.
+npm WARN skiapp@1.0.0 No license field.
 
-running command: ** step tag --version \$(cat VERSION)
-Updating chart version in charts/skiapp/Chart.yaml to 0.0.84
-Updating repository in charts/skiapp/values.yaml to gcr.io/**-development/skiapp
-Updating tag in charts/skiapp/values.yaml to 0.0.84
-error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
-: git output: To https://github.com/jenkins-oscar/skiapp.git
- ! [remote rejected] v0.0.84 -> v0.0.84 (cannot lock ref 'refs/tags/v0.0.84': reference already exists)
-error: failed to push some refs to 'https://github.com/jenkins-oscar/skiapp.git': failed to run 'git push origin v0.0.84' command in directory '', output: 'To https://github.com/jenkins-oscar/skiapp.git
- ! [remote rejected] v0.0.84 -> v0.0.84 (cannot lock ref 'refs/tags/v0.0.84': reference already exists)
-error: failed to push some refs to 'https://github.com/jenkins-oscar/skiapp.git''
-error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step tag --version $(cat VERSION)' command in directory '/workspace/source', output: ''
+added 152 packages from 599 contributors and audited 152 packages in 4.204s
+found 5 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> skiapp@1.0.0 test /workspace/source
+> ./node_modules/mocha/bin/mocha tests/ --exit
+
+Server running at http://localhost:8080
+
+
+  GET Home page
+    ✓ Should return a 200 ok response (52ms)
+
+
+  1 passing (58ms)
+
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0000] Retrieving image manifest node:9-slim        
+ERROR: logging before flag.Parse: E0717 00:50:33.674380      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0717 00:50:33.679604      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] Checking for cached layer gcr.io/**-development/cache:4511ca182fa6cb73f4132c88c77b23cdb3d2c8a71e6779ad6cdcd761cef11a28... 
+[36mINFO[0m[0004] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0004] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0009] Taking snapshot of full filesystem...        
+[36mINFO[0m[0011] Resolving paths                              
+[36mINFO[0m[0013] ENV PORT 8080                                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] EXPOSE 8080                                  
+[36mINFO[0m[0013] cmd: EXPOSE                                  
+[36mINFO[0m[0013] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] WORKDIR /usr/src/app                         
+[36mINFO[0m[0013] cmd: workdir                                 
+[36mINFO[0m[0013] Changed working directory to /usr/src/app    
+[36mINFO[0m[0013] Creating directory /usr/src/app              
+[36mINFO[0m[0013] Resolving paths                              
+[36mINFO[0m[0013] Taking snapshot of files...                  
+[36mINFO[0m[0017] COPY . .                                     
+[36mINFO[0m[0018] Resolving paths                              
+[36mINFO[0m[0018] Taking snapshot of files...                  
+[36mINFO[0m[0019] CMD ["npm", "start"]                         
+[36mINFO[0m[0019] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0019] Pushing layer gcr.io/**-development/cache:4511ca182fa6cb73f4132c88c77b23cdb3d2c8a71e6779ad6cdcd761cef11a28 to cache now 
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjenkins-oscar-skiapp-master-c5bl2-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+/bin/sh: line 0: cd: /workspace/source/charts/skiapp: No such file or directory
 [31m
-Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-changelog'. The execution of the pipeline has stopped.[0m

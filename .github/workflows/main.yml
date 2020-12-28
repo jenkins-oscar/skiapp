@@ -5,13 +5,10 @@
 ###########################
 name: Lint Code Base
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches-ignore:
+      - 'master'
 #
 # Documentation:
 # https://help.github.com/en/articles/workflow-syntax-for-github-actions

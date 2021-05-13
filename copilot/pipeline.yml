@@ -14,7 +14,7 @@ source:
   # the artifacts should be sourced from. For example, the GitHub provider
   # has the following properties: repository, branch.
   properties:
-    branch: main
+    branch: master
     repository: https://github.com/jenkins-oscar/skiapp
     # Optional: specify the name of an existing CodeStar Connections connection.
     # connection_name: a-connection
@@ -22,10 +22,13 @@ source:
 # The deployment section defines the order the pipeline will deploy
 # to your environments.
 stages:
-    - # The name of the environment to deploy to.
-      name: test
+    - name: test
       # Optional: flag for manual approval action before deployment.
       # requires_approval: true
       # Optional: use test commands to validate this stage of your build.
-      # test_commands: [echo 'running tests', make test]
-
+      test_commands: 
+        - echo 'running tests'
+        - npm install
+        - npm test
+    - name: staging
+      requires_approval: true

@@ -1,16 +1,16 @@
-# The manifest for the "front-end" service.
+# The manifest for the "ski" service.
 # Read the full specification for the "Load Balanced Web Service" type at:
 #  https://aws.github.io/copilot-cli/docs/manifest/lb-web-service/
 
 # Your service name will be used in naming your resources like log groups, ECS services, etc.
-name: front-end
+name: ski
 type: Load Balanced Web Service
 
 # Distribute traffic to your service.
 http:
   # Requests to this path will be forwarded to your service.
   # To match all requests you can use the "/" path.
-  path: '/'
+  path: 'ski'
   # You can specify a custom health check path. The default is "/".
   # healthcheck: '/'
 
@@ -31,8 +31,8 @@ exec: true     # Enable running commands in your container.
 #variables:                    # Pass environment variables as key value pairs.
 #  LOG_LEVEL: info
 
-secrets:                      # Pass secrets from AWS Systems Manager (SSM) Parameter Store.
-  GITHUB_TOKEN: "'arn:aws:secretsmanager:us-west-2:097496237170:secret:GithubWebHook-NNsRqU:githubhmac::'"  # The key is the name of the environment variable, the value is the name of the SSM parameter.
+#secrets:                      # Pass secrets from AWS Systems Manager (SSM) Parameter Store.
+#  GITHUB_TOKEN: GITHUB_TOKEN  # The key is the name of the environment variable, the value is the name of the SSM parameter.
 
 # You can override any of the values defined above by environment.
 #environments:

@@ -1,3 +1,8 @@
+if(process.env.ENABLE_TRACING == 'true'){
+	require('./tracing.js');
+	console.log('XRay instrumentation enabled');
+}
+
 var http = require('http');
 var fileSystem = require('fs');
 

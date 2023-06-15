@@ -32,6 +32,11 @@
 		background-size: cover;
 	}
 
+	.smaller-paragraph {
+    font-size: 14px; /* Adjust the font size as per your preference */
+    margin-bottom: 0; /* Optional: Remove bottom margin to reduce spacing */
+  }	
+
     </style>
 </head>
 
@@ -110,7 +115,7 @@
 		<div class="container">
 		  <h1 class="display-4">Skiapp</h1>
 		  <p class="lead">A sample NodeJS app showcasing amazing ski photography. By <a id="twitter-link" href ="https://twitter.com/DevOpsOscar">@DevOpsOscar</a></p>
-		  <p class="lead">Running on EKS cluster: <b>{{CLUSTER_NAME}}</b></p>
+		  <p class="lead smaller-paragraph">Running on EKS cluster: <b>{{CLUSTER_NAME}}</b></p>
 		</div>
 	  </section>	  
 

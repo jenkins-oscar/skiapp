@@ -13,12 +13,7 @@ if (process.env.ENABLE_TRACING === 'true') {
 
 // Configure Morgan to log access logs to stdout
 app.use(morgan('combined', {
-	stream: process.stdout // Log to stdout
-}));
-  
-// Configure Morgan to log error logs to stderr
-app.use(morgan('combined', {
-	stream: process.stderr // Log to stderr
+  stream: process.stdout // Log to stdout
 }));
 
 // Handle root route
@@ -28,8 +23,8 @@ app.get('/', (req, res) => {
       res.status(500).send('Error');
     } else {
       const updatedContent = fileContent.replace('{{CLUSTER_NAME}}', process.env.CLUSTER_NAME || '');
-      res.setHeader('Content-Type', 'text/html; charset=utf-8'); // Set the Content-Type header
-      res.status(200).send(fileContent);
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.status(200).send(updatedContent);
     }
   });
 });

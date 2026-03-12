@@ -16,6 +16,9 @@ app.use(morgan('combined', {
   stream: process.stdout // Log to stdout
 }));
 
+// Serve static files
+app.use(express.static('public'));
+
 // Handle root route
 app.get('/', (req, res) => {
   fileSystem.readFile('./index.html', 'utf8', (error, fileContent) => {

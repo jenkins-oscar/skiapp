@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skiapp
+  labels:
+    app: skiapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: skiapp
+  template:
+    metadata:
+      labels:
+        app: skiapp
+    spec:
+      containers:
+      - name: skiapp
+        image: node:18-alpine
+        command: ["npm", "start"]
+        workingDir: /app
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        volumeMounts:
+        - name: app-source
+          mountPath: /app
+      initContainers:
+      - name: git-clone
+        image: alpine/git
+        command: ["git", "clone", "https://github.com/amiewei/skiapp.git", "/app"]
+        volumeMounts:
+        - name: app-source
+          mountPath: /app
+      - name: npm-install
+        image: node:18-alpine
+        command: ["npm", "install"]
+        workingDir: /app
+        volumeMounts:
+        - name: app-source
+          mountPath: /app
+      volumes:
+      - name: app-source
+        emptyDir: {}
